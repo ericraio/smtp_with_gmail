@@ -1,24 +1,3 @@
-# = net/smtp.rb
-# 
-# Copyright (c) 1999-2004 Yukihiro Matsumoto.
-#
-# Copyright (c) 1999-2004 Minero Aoki.
-# 
-# Written & maintained by Minero Aoki <aamine@loveruby.net>.
-#
-# Documented by William Webber and Minero Aoki.
-# 
-# This program is free software. You can re-distribute and/or
-# modify this program under the same terms as Ruby itself.
-# 
-# NOTE: You can find Japanese version of this document at:
-# http://www.ruby-lang.org/ja/man/index.cgi?cmd=view;name=net%2Fsmtp.rb
-# 
-# $Id: smtp.rb 10709 2006-08-09 07:56:30Z matz $
-#
-# See Net::SMTP for documentation. 
-# 
-
 require 'net/protocol'
 require 'digest/md5'
 require 'timeout'
