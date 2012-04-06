@@ -23,12 +23,12 @@
 
 === POP
 
-def receive_messages
-  Net::POP.enable_ssl(OpenSSL::SSL::VERIFY_NONE)
-  Net::POP.start("pop.gmail.com", "995", "username", "password") do |pop|
-    p pop.mails[0].pop
-  end
-end
+    def receive_messages
+      Net::POP.enable_ssl(OpenSSL::SSL::VERIFY_NONE)
+      Net::POP.start("pop.gmail.com", "995", "username", "password") do |pop|
+        p pop.mails[0].pop
+      end
+    end
 
 == Contributing to smtp_with_gmail
 
