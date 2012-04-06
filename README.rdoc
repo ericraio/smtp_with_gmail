@@ -1,25 +1,25 @@
 = smtp_with_gmail
 
-gem install smtp_with_gmail
+    gem install smtp_with_gmail
 
 === SMTP
 
-def send_message
-  require "time"
-  msgstr = <<END_OF_MESSAGE
-From: Your Name <you@gmail.com>
-To: Destination Address <yourfriend@gmail.com>
-Subject: test message
-Date: #{Time.now.rfc2822}
+    def send_message
+      require "time"
+      msgstr = <<END_OF_MESSAGE
+      From: Your Name <you@gmail.com>
+      To: Destination Address <yourfriend@gmail.com>
+      Subject: test message
+      Date: #{Time.now.rfc2822}
 
-test message body.
-END_OF_MESSAGE
+      test message body.
+      END_OF_MESSAGE
 
-  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
-  Net::SMTP.start("smtp.gmail.com", "587", "your.domain", "username", "password", :plain) do |smtp|
-    smtp.send_message msgstr, "you@gmail.com", "yourfriend@gmail.com"
-  end
-end
+      Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+      Net::SMTP.start("smtp.gmail.com", "587", "your.domain", "username", "password", :plain) do |smtp|
+        smtp.send_message msgstr, "you@gmail.com", "yourfriend@gmail.com"
+      end
+    end
 
 === POP
 
